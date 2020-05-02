@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using Quanlyquannet.Views;
 
 namespace Quanlyquannet
 {
@@ -34,7 +35,8 @@ namespace Quanlyquannet
 
         private void btnNapTien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form frm_NapTien = new frm_NapTien();
+            frm_NapTien.ShowDialog();
         }
 
         private void tabHienThi_Click(object sender, EventArgs e)
@@ -71,5 +73,57 @@ namespace Quanlyquannet
         {
 
         }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitterControl1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void btnQuanLyMay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_QuanLyMay = new frm_QuanLyMay();
+            frm_QuanLyMay.ShowDialog();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_ThongKeDoanhThu = new frm_ThongKeDoanhThu();
+            frm_ThongKeDoanhThu.ShowDialog();
+        }
+
+        private void bbtnGioSuDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_ThongKeGioSuDung = new frm_ThongKeGioSuDung();
+            frm_ThongKeGioSuDung.ShowDialog();
+        }
+
+        private void bbtnDichVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_ThongKeDichVu = new frm_ThongKeDichVu();
+            frm_ThongKeDichVu.ShowDialog();
+        }
+
+        private void bbtnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbtnQuanLyTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_QuanLyTaiKhoan = new frm_QuanLyTaiKhoan();
+            frm_QuanLyTaiKhoan.ShowDialog();
+        }
+
+        private void bbtnQuanLyDichVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm_QuanLyDichVu = new frm_QuanLyDichVu();
+            frm_QuanLyDichVu.ShowDialog();
+        }
     }
+    
 }

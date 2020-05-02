@@ -11,11 +11,16 @@ using DevExpress.XtraEditors;
 
 namespace Quanlyquannet.Views
 {
-    public partial class frm_Login : DevExpress.XtraEditors.XtraForm
+    public partial class frm_DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        public frm_Login()
+        public frm_DangNhap()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
