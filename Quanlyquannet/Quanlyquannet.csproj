@@ -73,6 +73,7 @@
     <Compile Include="DAO\DAOFood.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Computer.cs" />
+    <Compile Include="SQLDB\SQLDB.cs" />
     <Compile Include="Views\frm_ThongKeGioSuDung.cs">
       <SubType>Form</SubType>
     </Compile>

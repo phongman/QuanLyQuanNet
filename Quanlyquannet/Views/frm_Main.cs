@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Quanlyquannet.Views;
+using Quanlyquannet.DTO;
 
 namespace Quanlyquannet
 {
@@ -17,7 +18,46 @@ namespace Quanlyquannet
         public frmMain()
         {
             InitializeComponent();
+             loadComputer();
         }
+
+        private void loadComputer()
+        {
+          
+            List<Computer> computerList = DAO.DAOComputer.LoadComputerList();
+            
+            foreach (Computer item in computerList)
+            {
+                
+                Button btn = new Button() { Width = 100, Height = 100 };
+                //string strStatus;
+                btn.BackColor = Color.LightBlue;
+               // btn.Image.Size.Width = 100;
+               // btn.Image.Size.Height = 100;
+                btn.Image = Quanlyquannet.Properties.Resources.Devices_computer_icon;
+                /*            btn.Tag = item;
+
+
+                            if (item.TrangThai.Equals("False"))
+                            {
+                                strStatus = "Trống";
+
+                            }
+                            else
+                            {
+                                btn.BackColor = Color.LightBlue;
+                                strStatus = "Có khách";
+                            }
+
+                */
+                flpDanhSachMay.Controls.Add(btn);
+                
+
+            }
+             
+
+        }
+
         public void skins()
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
@@ -124,6 +164,7 @@ namespace Quanlyquannet
             Form frm_QuanLyDichVu = new frm_QuanLyDichVu();
             frm_QuanLyDichVu.ShowDialog();
         }
+ 
     }
     
 }

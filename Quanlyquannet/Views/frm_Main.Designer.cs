@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation3 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation7 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.imgcl1 = new DevExpress.Utils.DPIAwareImageCollection(this.components);
@@ -94,36 +94,19 @@
             this.lblTienConLai = new System.Windows.Forms.Label();
             this.lblkqTongTien = new System.Windows.Forms.Label();
             this.lblkqTienDu = new System.Windows.Forms.Label();
-            this.btnComputer1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer3 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer4 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer5 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer6 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer7 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer8 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer9 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer10 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer11 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer12 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer13 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer14 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer15 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer16 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer17 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer18 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer19 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer20 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnComputer2 = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.danhsachmay = new DevExpress.XtraEditors.GroupControl();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.flpDanhSachMay = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgcl1)).BeginInit();
@@ -138,17 +121,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhsachmay)).BeginInit();
+            this.danhsachmay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.flpDanhSachMay.SuspendLayout();
             this.SuspendLayout();
             // 
             // repositoryItemColorPickEdit1
@@ -198,7 +183,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpHeThong,
             this.ribbonPage2});
-            this.ribbonControl1.Size = new System.Drawing.Size(1932, 178);
+            this.ribbonControl1.Size = new System.Drawing.Size(1612, 178);
             this.ribbonControl1.StatusBar = this.rbSStatus;
             // 
             // imgcl1
@@ -261,9 +246,9 @@
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group2";
+            galleryItemGroup7.Caption = "Group2";
             this.skinPaletteRibbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup7});
             this.skinPaletteRibbonGalleryBarItem1.Id = 11;
             this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
             // 
@@ -399,12 +384,12 @@
             this.rpgQuanlydichvu,
             this.rpgGiaodien});
             this.rbpHeThong.Name = "rbpHeThong";
-            reduceOperation3.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
-            reduceOperation3.GroupName = null;
-            reduceOperation3.ItemLinkIndex = 0;
-            reduceOperation3.ItemLinksCount = 0;
-            reduceOperation3.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.rbpHeThong.ReduceOperations.Add(reduceOperation3);
+            reduceOperation7.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
+            reduceOperation7.GroupName = null;
+            reduceOperation7.ItemLinkIndex = 0;
+            reduceOperation7.ItemLinksCount = 0;
+            reduceOperation7.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.rbpHeThong.ReduceOperations.Add(reduceOperation7);
             this.rbpHeThong.Text = "Hệ thống";
             // 
             // rbgQuanlydichvu
@@ -660,300 +645,21 @@
             this.lblkqTienDu.TabIndex = 96;
             this.lblkqTienDu.Text = "T";
             // 
-            // btnComputer1
+            // danhsachmay
             // 
-            this.btnComputer1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer1.Appearance.Options.UseFont = true;
-            this.btnComputer1.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer1.Location = new System.Drawing.Point(16, 30);
-            this.btnComputer1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer1.Name = "btnComputer1";
-            this.btnComputer1.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer1.TabIndex = 74;
-            this.btnComputer1.Text = "Máy 1";
-            // 
-            // btnComputer3
-            // 
-            this.btnComputer3.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer3.Appearance.Options.UseFont = true;
-            this.btnComputer3.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer3.Location = new System.Drawing.Point(325, 30);
-            this.btnComputer3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer3.Name = "btnComputer3";
-            this.btnComputer3.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer3.TabIndex = 77;
-            this.btnComputer3.Text = "Máy 3";
-            // 
-            // btnComputer4
-            // 
-            this.btnComputer4.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer4.Appearance.Options.UseFont = true;
-            this.btnComputer4.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer4.Location = new System.Drawing.Point(479, 30);
-            this.btnComputer4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer4.Name = "btnComputer4";
-            this.btnComputer4.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer4.TabIndex = 78;
-            this.btnComputer4.Text = "Máy 4";
-            // 
-            // btnComputer5
-            // 
-            this.btnComputer5.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer5.Appearance.Options.UseFont = true;
-            this.btnComputer5.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer5.Location = new System.Drawing.Point(633, 30);
-            this.btnComputer5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer5.Name = "btnComputer5";
-            this.btnComputer5.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer5.TabIndex = 79;
-            this.btnComputer5.Text = "Máy 5";
-            // 
-            // btnComputer6
-            // 
-            this.btnComputer6.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer6.Appearance.Options.UseFont = true;
-            this.btnComputer6.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer6.Location = new System.Drawing.Point(786, 30);
-            this.btnComputer6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer6.Name = "btnComputer6";
-            this.btnComputer6.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer6.TabIndex = 80;
-            this.btnComputer6.Text = "Máy 6";
-            // 
-            // btnComputer7
-            // 
-            this.btnComputer7.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer7.Appearance.Options.UseFont = true;
-            this.btnComputer7.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer7.Location = new System.Drawing.Point(16, 165);
-            this.btnComputer7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer7.Name = "btnComputer7";
-            this.btnComputer7.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer7.TabIndex = 81;
-            this.btnComputer7.Text = "Máy 7";
-            // 
-            // btnComputer8
-            // 
-            this.btnComputer8.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer8.Appearance.Options.UseFont = true;
-            this.btnComputer8.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer8.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer8.Location = new System.Drawing.Point(169, 165);
-            this.btnComputer8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer8.Name = "btnComputer8";
-            this.btnComputer8.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer8.TabIndex = 82;
-            this.btnComputer8.Text = "Máy 8";
-            // 
-            // btnComputer9
-            // 
-            this.btnComputer9.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer9.Appearance.Options.UseFont = true;
-            this.btnComputer9.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer9.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer9.Location = new System.Drawing.Point(322, 165);
-            this.btnComputer9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer9.Name = "btnComputer9";
-            this.btnComputer9.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer9.TabIndex = 83;
-            this.btnComputer9.Text = "Máy 9";
-            // 
-            // btnComputer10
-            // 
-            this.btnComputer10.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer10.Appearance.Options.UseFont = true;
-            this.btnComputer10.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer10.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer10.Location = new System.Drawing.Point(475, 165);
-            this.btnComputer10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer10.Name = "btnComputer10";
-            this.btnComputer10.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer10.TabIndex = 84;
-            this.btnComputer10.Text = "Máy 10";
-            // 
-            // btnComputer11
-            // 
-            this.btnComputer11.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer11.Appearance.Options.UseFont = true;
-            this.btnComputer11.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer11.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer11.Location = new System.Drawing.Point(629, 165);
-            this.btnComputer11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer11.Name = "btnComputer11";
-            this.btnComputer11.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer11.TabIndex = 85;
-            this.btnComputer11.Text = "Máy 11";
-            // 
-            // btnComputer12
-            // 
-            this.btnComputer12.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer12.Appearance.Options.UseFont = true;
-            this.btnComputer12.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer12.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer12.Location = new System.Drawing.Point(786, 165);
-            this.btnComputer12.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer12.Name = "btnComputer12";
-            this.btnComputer12.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer12.TabIndex = 86;
-            this.btnComputer12.Text = "Máy 12";
-            // 
-            // btnComputer13
-            // 
-            this.btnComputer13.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer13.Appearance.Options.UseFont = true;
-            this.btnComputer13.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer13.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer13.Location = new System.Drawing.Point(16, 300);
-            this.btnComputer13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer13.Name = "btnComputer13";
-            this.btnComputer13.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer13.TabIndex = 87;
-            this.btnComputer13.Text = "Máy 13";
-            // 
-            // btnComputer14
-            // 
-            this.btnComputer14.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer14.Appearance.Options.UseFont = true;
-            this.btnComputer14.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer14.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer14.Location = new System.Drawing.Point(170, 300);
-            this.btnComputer14.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer14.Name = "btnComputer14";
-            this.btnComputer14.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer14.TabIndex = 88;
-            this.btnComputer14.Text = "Máy 14";
-            // 
-            // btnComputer15
-            // 
-            this.btnComputer15.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer15.Appearance.Options.UseFont = true;
-            this.btnComputer15.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer15.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer15.Location = new System.Drawing.Point(322, 300);
-            this.btnComputer15.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer15.Name = "btnComputer15";
-            this.btnComputer15.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer15.TabIndex = 89;
-            this.btnComputer15.Text = "Máy 15";
-            // 
-            // btnComputer16
-            // 
-            this.btnComputer16.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer16.Appearance.Options.UseFont = true;
-            this.btnComputer16.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer16.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer16.Location = new System.Drawing.Point(475, 300);
-            this.btnComputer16.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer16.Name = "btnComputer16";
-            this.btnComputer16.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer16.TabIndex = 90;
-            this.btnComputer16.Text = "Máy 16";
-            // 
-            // btnComputer17
-            // 
-            this.btnComputer17.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer17.Appearance.Options.UseFont = true;
-            this.btnComputer17.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer17.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer17.Location = new System.Drawing.Point(629, 300);
-            this.btnComputer17.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer17.Name = "btnComputer17";
-            this.btnComputer17.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer17.TabIndex = 91;
-            this.btnComputer17.Text = "Máy 17";
-            // 
-            // btnComputer18
-            // 
-            this.btnComputer18.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer18.Appearance.Options.UseFont = true;
-            this.btnComputer18.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer18.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer18.Location = new System.Drawing.Point(786, 300);
-            this.btnComputer18.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer18.Name = "btnComputer18";
-            this.btnComputer18.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer18.TabIndex = 92;
-            this.btnComputer18.Text = "Máy 18";
-            // 
-            // btnComputer19
-            // 
-            this.btnComputer19.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer19.Appearance.Options.UseFont = true;
-            this.btnComputer19.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer19.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer19.Location = new System.Drawing.Point(16, 435);
-            this.btnComputer19.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer19.Name = "btnComputer19";
-            this.btnComputer19.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer19.TabIndex = 93;
-            this.btnComputer19.Text = "Máy 19";
-            // 
-            // btnComputer20
-            // 
-            this.btnComputer20.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer20.Appearance.Options.UseFont = true;
-            this.btnComputer20.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer20.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer20.Location = new System.Drawing.Point(170, 435);
-            this.btnComputer20.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer20.Name = "btnComputer20";
-            this.btnComputer20.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer20.TabIndex = 94;
-            this.btnComputer20.Text = "Máy 20";
-            // 
-            // btnComputer2
-            // 
-            this.btnComputer2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComputer2.Appearance.Options.UseFont = true;
-            this.btnComputer2.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon2;
-            this.btnComputer2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnComputer2.Location = new System.Drawing.Point(170, 30);
-            this.btnComputer2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnComputer2.Name = "btnComputer2";
-            this.btnComputer2.Size = new System.Drawing.Size(142, 125);
-            this.btnComputer2.TabIndex = 98;
-            this.btnComputer2.Text = "Máy 2";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.btnComputer6);
-            this.groupControl1.Controls.Add(this.btnComputer9);
-            this.groupControl1.Controls.Add(this.btnComputer2);
-            this.groupControl1.Controls.Add(this.btnComputer7);
-            this.groupControl1.Controls.Add(this.btnComputer17);
-            this.groupControl1.Controls.Add(this.btnComputer3);
-            this.groupControl1.Controls.Add(this.btnComputer4);
-            this.groupControl1.Controls.Add(this.btnComputer5);
-            this.groupControl1.Controls.Add(this.btnComputer8);
-            this.groupControl1.Controls.Add(this.btnComputer10);
-            this.groupControl1.Controls.Add(this.btnComputer11);
-            this.groupControl1.Controls.Add(this.btnComputer1);
-            this.groupControl1.Controls.Add(this.btnComputer12);
-            this.groupControl1.Controls.Add(this.btnComputer13);
-            this.groupControl1.Controls.Add(this.btnComputer14);
-            this.groupControl1.Controls.Add(this.btnComputer19);
-            this.groupControl1.Controls.Add(this.btnComputer20);
-            this.groupControl1.Controls.Add(this.btnComputer18);
-            this.groupControl1.Controls.Add(this.btnComputer15);
-            this.groupControl1.Controls.Add(this.btnComputer16);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl1.Location = new System.Drawing.Point(0, 178);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1095, 862);
-            this.groupControl1.TabIndex = 100;
-            this.groupControl1.Text = "Danh sách máy";
+            this.danhsachmay.Controls.Add(this.flpDanhSachMay);
+            this.danhsachmay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.danhsachmay.Location = new System.Drawing.Point(0, 178);
+            this.danhsachmay.Name = "danhsachmay";
+            this.danhsachmay.Size = new System.Drawing.Size(1095, 739);
+            this.danhsachmay.TabIndex = 100;
+            this.danhsachmay.Text = "Danh sách máy";
             // 
             // splitterControl1
             // 
             this.splitterControl1.Location = new System.Drawing.Point(1095, 178);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(6, 862);
+            this.splitterControl1.Size = new System.Drawing.Size(6, 739);
             this.splitterControl1.TabIndex = 101;
             this.splitterControl1.TabStop = false;
             this.splitterControl1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitterControl1_SplitterMoved);
@@ -966,9 +672,57 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(1101, 178);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(831, 862);
+            this.groupControl2.Size = new System.Drawing.Size(511, 739);
             this.groupControl2.TabIndex = 102;
             this.groupControl2.Text = "Chi tiết";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.dataGridView1);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(2, 297);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(507, 340);
+            this.panelControl3.TabIndex = 101;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(503, 336);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.lblTongTien);
+            this.panelControl2.Controls.Add(this.lblkqTaiKhoan);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl2.Location = new System.Drawing.Point(2, 637);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(507, 100);
+            this.panelControl2.TabIndex = 100;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.lblTienConLai);
+            this.panelControl1.Controls.Add(this.btnXoa);
+            this.panelControl1.Controls.Add(this.lblTaiKhoan);
+            this.panelControl1.Controls.Add(this.btnThem);
+            this.panelControl1.Controls.Add(this.lblSoLuong);
+            this.panelControl1.Controls.Add(this.lblkqTienDu);
+            this.panelControl1.Controls.Add(this.nudSoLuong);
+            this.panelControl1.Controls.Add(this.lblDichVu);
+            this.panelControl1.Controls.Add(this.lblkqTongTien);
+            this.panelControl1.Controls.Add(this.cbbDichVu);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(2, 25);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(507, 272);
+            this.panelControl1.TabIndex = 99;
             // 
             // btnXoa
             // 
@@ -994,53 +748,32 @@
             this.btnThem.TabIndex = 97;
             this.btnThem.Text = "Thêm";
             // 
-            // panelControl1
+            // fileSystemWatcher1
             // 
-            this.panelControl1.Controls.Add(this.lblTienConLai);
-            this.panelControl1.Controls.Add(this.btnXoa);
-            this.panelControl1.Controls.Add(this.lblTaiKhoan);
-            this.panelControl1.Controls.Add(this.btnThem);
-            this.panelControl1.Controls.Add(this.lblSoLuong);
-            this.panelControl1.Controls.Add(this.lblkqTienDu);
-            this.panelControl1.Controls.Add(this.nudSoLuong);
-            this.panelControl1.Controls.Add(this.lblDichVu);
-            this.panelControl1.Controls.Add(this.lblkqTongTien);
-            this.panelControl1.Controls.Add(this.cbbDichVu);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 25);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(827, 272);
-            this.panelControl1.TabIndex = 99;
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // panelControl2
+            // flpDanhSachMay
             // 
-            this.panelControl2.Controls.Add(this.lblTongTien);
-            this.panelControl2.Controls.Add(this.lblkqTaiKhoan);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(2, 760);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(827, 100);
-            this.panelControl2.TabIndex = 100;
+            this.flpDanhSachMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.flpDanhSachMay.Controls.Add(this.button2);
+            this.flpDanhSachMay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDanhSachMay.Location = new System.Drawing.Point(2, 25);
+            this.flpDanhSachMay.Margin = new System.Windows.Forms.Padding(5);
+            this.flpDanhSachMay.Name = "flpDanhSachMay";
+            this.flpDanhSachMay.Size = new System.Drawing.Size(1091, 712);
+            this.flpDanhSachMay.TabIndex = 0;
             // 
-            // panelControl3
+            // button2
             // 
-            this.panelControl3.Controls.Add(this.dataGridView1);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(2, 297);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(827, 463);
-            this.panelControl3.TabIndex = 101;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(823, 459);
-            this.dataGridView1.TabIndex = 0;
+            this.button2.Image = global::Quanlyquannet.Properties.Resources.Devices_computer_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -1049,10 +782,10 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1932, 1040);
+            this.ClientSize = new System.Drawing.Size(1612, 917);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.splitterControl1);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.danhsachmay);
             this.Controls.Add(this.ribbonControl1);
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1079,19 +812,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.danhsachmay)).EndInit();
+            this.danhsachmay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.flpDanhSachMay.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,27 +896,7 @@
         private System.Windows.Forms.Label lblTienConLai;
         private System.Windows.Forms.Label lblkqTongTien;
         private System.Windows.Forms.Label lblkqTienDu;
-        private DevExpress.XtraEditors.SimpleButton btnComputer1;
-        private DevExpress.XtraEditors.SimpleButton btnComputer3;
-        private DevExpress.XtraEditors.SimpleButton btnComputer4;
-        private DevExpress.XtraEditors.SimpleButton btnComputer5;
-        private DevExpress.XtraEditors.SimpleButton btnComputer6;
-        private DevExpress.XtraEditors.SimpleButton btnComputer7;
-        private DevExpress.XtraEditors.SimpleButton btnComputer8;
-        private DevExpress.XtraEditors.SimpleButton btnComputer9;
-        private DevExpress.XtraEditors.SimpleButton btnComputer10;
-        private DevExpress.XtraEditors.SimpleButton btnComputer11;
-        private DevExpress.XtraEditors.SimpleButton btnComputer12;
-        private DevExpress.XtraEditors.SimpleButton btnComputer13;
-        private DevExpress.XtraEditors.SimpleButton btnComputer14;
-        private DevExpress.XtraEditors.SimpleButton btnComputer15;
-        private DevExpress.XtraEditors.SimpleButton btnComputer16;
-        private DevExpress.XtraEditors.SimpleButton btnComputer17;
-        private DevExpress.XtraEditors.SimpleButton btnComputer18;
-        private DevExpress.XtraEditors.SimpleButton btnComputer19;
-        private DevExpress.XtraEditors.SimpleButton btnComputer20;
-        private DevExpress.XtraEditors.SimpleButton btnComputer2;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl danhsachmay;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
@@ -1191,6 +906,9 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhSachMay;
+        private System.Windows.Forms.Button button2;
     }
 }
 

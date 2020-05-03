@@ -32,40 +32,40 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.numGiaTien = new System.Windows.Forms.NumericUpDown();
+            this.txtMaMay = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTenMay = new DevExpress.XtraEditors.TextEdit();
+            this.lblTenMay = new DevExpress.XtraEditors.LabelControl();
+            this.lblMaMay = new DevExpress.XtraEditors.LabelControl();
+            this.btnLamMoiMay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemMay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoaMay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaMay = new DevExpress.XtraEditors.SimpleButton();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.txtTenTaiKhoan = new DevExpress.XtraEditors.TextEdit();
+            this.txtTimKiemMay = new DevExpress.XtraEditors.TextEdit();
             this.lblTenTaiKhoan = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTimKiemMay = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtMaKH = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
-            this.txtETenTaiKhoan = new DevExpress.XtraEditors.TextEdit();
-            this.lblTenMay = new DevExpress.XtraEditors.LabelControl();
-            this.lblMaMay = new DevExpress.XtraEditors.LabelControl();
+            this.dgvQuanLyMay = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGiaTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenMay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiemMay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtETenTaiKhoan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyMay)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -93,16 +93,16 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.txtMaKH);
+            this.groupControl1.Controls.Add(this.numGiaTien);
+            this.groupControl1.Controls.Add(this.txtMaMay);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtMatKhau);
-            this.groupControl1.Controls.Add(this.txtETenTaiKhoan);
+            this.groupControl1.Controls.Add(this.txtTenMay);
             this.groupControl1.Controls.Add(this.lblTenMay);
             this.groupControl1.Controls.Add(this.lblMaMay);
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton4);
-            this.groupControl1.Controls.Add(this.simpleButton5);
+            this.groupControl1.Controls.Add(this.btnLamMoiMay);
+            this.groupControl1.Controls.Add(this.btnThemMay);
+            this.groupControl1.Controls.Add(this.btnXoaMay);
+            this.groupControl1.Controls.Add(this.btnSuaMay);
             this.groupControl1.Controls.Add(this.btnLamMoi);
             this.groupControl1.Controls.Add(this.btnThem);
             this.groupControl1.Controls.Add(this.btnXoa);
@@ -114,53 +114,138 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Thông tin";
             // 
-            // simpleButton1
+            // numGiaTien
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Reset_icon__1_;
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(460, 509);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(125, 51);
-            this.simpleButton1.TabIndex = 39;
-            this.simpleButton1.Text = "Làm mới";
+            this.numGiaTien.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numGiaTien.Increment = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numGiaTien.Location = new System.Drawing.Point(247, 304);
+            this.numGiaTien.Maximum = new decimal(new int[] {
+            20000,
+            0,
+            0,
+            0});
+            this.numGiaTien.Minimum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numGiaTien.Name = "numGiaTien";
+            this.numGiaTien.Size = new System.Drawing.Size(193, 28);
+            this.numGiaTien.TabIndex = 46;
+            this.numGiaTien.Value = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
             // 
-            // simpleButton2
+            // txtMaMay
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Actions_list_add_icon;
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftBottom;
-            this.simpleButton2.Location = new System.Drawing.Point(27, 509);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(125, 51);
-            this.simpleButton2.TabIndex = 36;
-            this.simpleButton2.Text = "Thêm";
+            this.txtMaMay.Location = new System.Drawing.Point(247, 157);
+            this.txtMaMay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaMay.Name = "txtMaMay";
+            this.txtMaMay.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMay.Properties.Appearance.Options.UseFont = true;
+            this.txtMaMay.Size = new System.Drawing.Size(193, 28);
+            this.txtMaMay.TabIndex = 44;
             // 
-            // simpleButton4
+            // labelControl1
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.delete_icon__1_;
-            this.simpleButton4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton4.Location = new System.Drawing.Point(315, 509);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(125, 51);
-            this.simpleButton4.TabIndex = 38;
-            this.simpleButton4.Text = "Xóa";
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(131, 157);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(80, 21);
+            this.labelControl1.TabIndex = 45;
+            this.labelControl1.Text = "Mã máy: ";
             // 
-            // simpleButton5
+            // txtTenMay
             // 
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.edit_icon;
-            this.simpleButton5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton5.Location = new System.Drawing.Point(169, 509);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(125, 51);
-            this.simpleButton5.TabIndex = 37;
-            this.simpleButton5.Text = "Sửa";
+            this.txtTenMay.Location = new System.Drawing.Point(247, 232);
+            this.txtTenMay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenMay.Name = "txtTenMay";
+            this.txtTenMay.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenMay.Properties.Appearance.Options.UseFont = true;
+            this.txtTenMay.Size = new System.Drawing.Size(193, 28);
+            this.txtTenMay.TabIndex = 40;
+            // 
+            // lblTenMay
+            // 
+            this.lblTenMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMay.Appearance.Options.UseFont = true;
+            this.lblTenMay.Location = new System.Drawing.Point(134, 306);
+            this.lblTenMay.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenMay.Name = "lblTenMay";
+            this.lblTenMay.Size = new System.Drawing.Size(77, 22);
+            this.lblTenMay.TabIndex = 43;
+            this.lblTenMay.Text = "Giá tiền:";
+            // 
+            // lblMaMay
+            // 
+            this.lblMaMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaMay.Appearance.Options.UseFont = true;
+            this.lblMaMay.Location = new System.Drawing.Point(129, 232);
+            this.lblMaMay.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMaMay.Name = "lblMaMay";
+            this.lblMaMay.Size = new System.Drawing.Size(82, 21);
+            this.lblMaMay.TabIndex = 41;
+            this.lblMaMay.Text = "Tên máy:";
+            // 
+            // btnLamMoiMay
+            // 
+            this.btnLamMoiMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoiMay.Appearance.Options.UseFont = true;
+            this.btnLamMoiMay.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Reset_icon__1_;
+            this.btnLamMoiMay.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnLamMoiMay.Location = new System.Drawing.Point(460, 509);
+            this.btnLamMoiMay.Name = "btnLamMoiMay";
+            this.btnLamMoiMay.Size = new System.Drawing.Size(125, 51);
+            this.btnLamMoiMay.TabIndex = 39;
+            this.btnLamMoiMay.Text = "Làm mới";
+            this.btnLamMoiMay.Click += new System.EventHandler(this.btnLamMoiMay_Click);
+            // 
+            // btnThemMay
+            // 
+            this.btnThemMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMay.Appearance.Options.UseFont = true;
+            this.btnThemMay.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Actions_list_add_icon;
+            this.btnThemMay.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftBottom;
+            this.btnThemMay.Location = new System.Drawing.Point(27, 509);
+            this.btnThemMay.Name = "btnThemMay";
+            this.btnThemMay.Size = new System.Drawing.Size(125, 51);
+            this.btnThemMay.TabIndex = 36;
+            this.btnThemMay.Text = "Thêm";
+            this.btnThemMay.Click += new System.EventHandler(this.btnThemMay_Click);
+            // 
+            // btnXoaMay
+            // 
+            this.btnXoaMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaMay.Appearance.Options.UseFont = true;
+            this.btnXoaMay.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.delete_icon__1_;
+            this.btnXoaMay.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnXoaMay.Location = new System.Drawing.Point(315, 509);
+            this.btnXoaMay.Name = "btnXoaMay";
+            this.btnXoaMay.Size = new System.Drawing.Size(125, 51);
+            this.btnXoaMay.TabIndex = 38;
+            this.btnXoaMay.Text = "Xóa";
+            this.btnXoaMay.Click += new System.EventHandler(this.btnXoaMay_Click);
+            // 
+            // btnSuaMay
+            // 
+            this.btnSuaMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaMay.Appearance.Options.UseFont = true;
+            this.btnSuaMay.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.edit_icon;
+            this.btnSuaMay.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSuaMay.Location = new System.Drawing.Point(169, 509);
+            this.btnSuaMay.Name = "btnSuaMay";
+            this.btnSuaMay.Size = new System.Drawing.Size(125, 51);
+            this.btnSuaMay.TabIndex = 37;
+            this.btnSuaMay.Text = "Sửa";
+            this.btnSuaMay.Click += new System.EventHandler(this.btnSuaMay_Click);
             // 
             // btnLamMoi
             // 
@@ -220,9 +305,9 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.txtTenTaiKhoan);
+            this.groupControl2.Controls.Add(this.txtTimKiemMay);
             this.groupControl2.Controls.Add(this.lblTenTaiKhoan);
-            this.groupControl2.Controls.Add(this.simpleButton3);
+            this.groupControl2.Controls.Add(this.btnTimKiemMay);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(619, 58);
             this.groupControl2.Name = "groupControl2";
@@ -230,15 +315,15 @@
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Tìm kiếm";
             // 
-            // txtTenTaiKhoan
+            // txtTimKiemMay
             // 
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(186, 52);
-            this.txtTenTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTaiKhoan.Properties.Appearance.Options.UseFont = true;
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(193, 28);
-            this.txtTenTaiKhoan.TabIndex = 28;
+            this.txtTimKiemMay.Location = new System.Drawing.Point(186, 52);
+            this.txtTimKiemMay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiemMay.Name = "txtTimKiemMay";
+            this.txtTimKiemMay.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemMay.Properties.Appearance.Options.UseFont = true;
+            this.txtTimKiemMay.Size = new System.Drawing.Size(193, 28);
+            this.txtTimKiemMay.TabIndex = 28;
             // 
             // lblTenTaiKhoan
             // 
@@ -251,21 +336,21 @@
             this.lblTenTaiKhoan.TabIndex = 26;
             this.lblTenTaiKhoan.Text = "Tên máy:";
             // 
-            // simpleButton3
+            // btnTimKiemMay
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Search_icon1;
-            this.simpleButton3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(401, 45);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(140, 35);
-            this.simpleButton3.TabIndex = 27;
-            this.simpleButton3.Text = "Tìm kiếm";
+            this.btnTimKiemMay.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemMay.Appearance.Options.UseFont = true;
+            this.btnTimKiemMay.ImageOptions.Image = global::Quanlyquannet.Properties.Resources.Search_icon1;
+            this.btnTimKiemMay.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnTimKiemMay.Location = new System.Drawing.Point(401, 45);
+            this.btnTimKiemMay.Name = "btnTimKiemMay";
+            this.btnTimKiemMay.Size = new System.Drawing.Size(140, 35);
+            this.btnTimKiemMay.TabIndex = 27;
+            this.btnTimKiemMay.Text = "Tìm kiếm";
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.dataGridView1);
+            this.groupControl3.Controls.Add(this.dgvQuanLyMay);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(619, 158);
             this.groupControl3.Name = "groupControl3";
@@ -273,79 +358,17 @@
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Kết quả";
             // 
-            // dataGridView1
+            // dgvQuanLyMay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 468);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(247, 157);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKH.Properties.Appearance.Options.UseFont = true;
-            this.txtMaKH.Size = new System.Drawing.Size(193, 28);
-            this.txtMaKH.TabIndex = 44;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(131, 157);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(80, 21);
-            this.labelControl1.TabIndex = 45;
-            this.labelControl1.Text = "Mã máy: ";
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Location = new System.Drawing.Point(247, 306);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(193, 28);
-            this.txtMatKhau.TabIndex = 42;
-            // 
-            // txtETenTaiKhoan
-            // 
-            this.txtETenTaiKhoan.Location = new System.Drawing.Point(247, 232);
-            this.txtETenTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtETenTaiKhoan.Name = "txtETenTaiKhoan";
-            this.txtETenTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtETenTaiKhoan.Properties.Appearance.Options.UseFont = true;
-            this.txtETenTaiKhoan.Size = new System.Drawing.Size(193, 28);
-            this.txtETenTaiKhoan.TabIndex = 40;
-            // 
-            // lblTenMay
-            // 
-            this.lblTenMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenMay.Appearance.Options.UseFont = true;
-            this.lblTenMay.Location = new System.Drawing.Point(134, 306);
-            this.lblTenMay.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenMay.Name = "lblTenMay";
-            this.lblTenMay.Size = new System.Drawing.Size(77, 22);
-            this.lblTenMay.TabIndex = 43;
-            this.lblTenMay.Text = "Giá tiền:";
-            // 
-            // lblMaMay
-            // 
-            this.lblMaMay.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaMay.Appearance.Options.UseFont = true;
-            this.lblMaMay.Location = new System.Drawing.Point(129, 232);
-            this.lblMaMay.Margin = new System.Windows.Forms.Padding(4);
-            this.lblMaMay.Name = "lblMaMay";
-            this.lblMaMay.Size = new System.Drawing.Size(82, 21);
-            this.lblMaMay.TabIndex = 41;
-            this.lblMaMay.Text = "Tên máy:";
+            this.dgvQuanLyMay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQuanLyMay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuanLyMay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvQuanLyMay.Location = new System.Drawing.Point(2, 25);
+            this.dgvQuanLyMay.Name = "dgvQuanLyMay";
+            this.dgvQuanLyMay.RowHeadersWidth = 51;
+            this.dgvQuanLyMay.RowTemplate.Height = 24;
+            this.dgvQuanLyMay.Size = new System.Drawing.Size(669, 468);
+            this.dgvQuanLyMay.TabIndex = 0;
             // 
             // frm_QuanLyMay
             // 
@@ -368,16 +391,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGiaTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenMay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiemMay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtETenTaiKhoan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyMay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,20 +416,20 @@
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.TextEdit txtTenTaiKhoan;
+        private DevExpress.XtraEditors.TextEdit txtTimKiemMay;
         private DevExpress.XtraEditors.LabelControl lblTenTaiKhoan;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnTimKiemMay;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.TextEdit txtMaKH;
+        private System.Windows.Forms.DataGridView dgvQuanLyMay;
+        private DevExpress.XtraEditors.SimpleButton btnLamMoiMay;
+        private DevExpress.XtraEditors.SimpleButton btnThemMay;
+        private DevExpress.XtraEditors.SimpleButton btnXoaMay;
+        private DevExpress.XtraEditors.SimpleButton btnSuaMay;
+        private DevExpress.XtraEditors.TextEdit txtMaMay;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtMatKhau;
-        private DevExpress.XtraEditors.TextEdit txtETenTaiKhoan;
+        private DevExpress.XtraEditors.TextEdit txtTenMay;
         private DevExpress.XtraEditors.LabelControl lblTenMay;
         private DevExpress.XtraEditors.LabelControl lblMaMay;
+        private System.Windows.Forms.NumericUpDown numGiaTien;
     }
 }
