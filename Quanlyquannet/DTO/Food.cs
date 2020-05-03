@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quanlyquannet.Controllers
+namespace Quanlyquannet.DTO
 {
-    class LoginCtrl
+    class Food
     {
-
     }
 }
