@@ -21,7 +21,7 @@ namespace Quanlyquannet.DTO
             this.MaMay = (string)row["MaMay"];
             this.TenMay = row["TenMay"].ToString();
             this.TrangThai = (bool)row["TrangThai"];
-            this.GiaTien = Convert.ToDouble(row["GiaTien"]);
+            this.GiaTien = Convert.ToDouble(row["Gia"]);
         }
         private string tenMay;
         private bool trangThai;

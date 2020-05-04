@@ -71,8 +71,12 @@
   <ItemGroup>
     <Compile Include="DAO\DAOComputer.cs" />
     <Compile Include="DAO\DAOFood.cs" />
+    <Compile Include="DAO\DAOTaiKhoanDichVu.cs" />
+    <Compile Include="DAO\DAOTaiKhoanMay.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Computer.cs" />
+    <Compile Include="DTO\TaiKhoanDichVu.cs" />
+    <Compile Include="DTO\TaiKhoanMay.cs" />
     <Compile Include="SQLDB\SQLDB.cs" />
     <Compile Include="Views\frm_ThongKeGioSuDung.cs">
       <SubType>Form</SubType>

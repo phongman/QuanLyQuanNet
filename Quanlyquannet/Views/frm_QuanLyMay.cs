@@ -18,37 +18,64 @@ namespace Quanlyquannet.Views
         {
             InitializeComponent();
             dgvQuanLyMay.DataSource = computerList;
-            loadComputer();
-            addComputerBinding();
+            refeshComputer();
+
         }
         #region  method
         private void addComputerBinding()
         {
+            clearBinding();
             txtMaMay.DataBindings.Add(new Binding("Text", dgvQuanLyMay.DataSource, "MaMay", true, DataSourceUpdateMode.Never));
             txtTenMay.DataBindings.Add(new Binding("Text", dgvQuanLyMay.DataSource, "TenMay", true, DataSourceUpdateMode.Never));
             numGiaTien.DataBindings.Add(new Binding("Value", dgvQuanLyMay.DataSource, "GiaTien", true, DataSourceUpdateMode.Never));
-             
+        }
 
-        
+        private void clearBinding()
+        {
+            txtMaMay.DataBindings.Clear();
+            txtTenMay.DataBindings.Clear();
+            numGiaTien.DataBindings.Clear();
         }
 
         private void loadComputer()
         {
-            dgvQuanLyMay.DataSource = DAO.DAOComputer.LoadComputerList();
+            
+            dgvQuanLyMay.DataSource = DAO.DAOComputer.LoadComputerList();  
         }
+
+
+        private void refeshComputer()
+        {
+            loadComputer();
+            addComputerBinding();
+        }
+
 
         #endregion
 
         #region  event
         private void btnThemMay_Click(object sender, EventArgs e)
         {
-            string maMay = txtMaMay.Text;
-            string tenMay = txtTenMay.Text;
-            double giaTien = Convert.ToDouble(numGiaTien.Value);
+            try
+            {
+                string maMay = txtMaMay.Text;
+                string tenMay = txtTenMay.Text;
+                double giaTien = Convert.ToDouble(numGiaTien.Value);
 
-            DAO.DAOComputer.InsertComputer(maMay, tenMay, giaTien);
-            MessageBox.Show("Thêm món thành công!");
-            loadComputer();
+                DAO.DAOComputer.InsertComputer(maMay, tenMay, giaTien);
+                MessageBox.Show("Thêm máy thành công!","Thông báo!");
+                refeshComputer();
+
+            }
+            catch
+            {
+                MessageBox.Show("Mã máy đã tồn tại.Thêm máy thất bại", "Thông báo!");
+                refeshComputer();
+            }
+             
+            
+            
+
 
         }
 
@@ -59,8 +86,9 @@ namespace Quanlyquannet.Views
             if (MessageBox.Show("Bạn có muốn xóa "+tenMay+ " không?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 DAO.DAOComputer.DeleteComputer(maMay);
-                MessageBox.Show("Xóa món thành công!");
-                loadComputer();
+                MessageBox.Show("Xóa máy thành công!", "Thông báo!");
+                refeshComputer();
+
 
             }
         }
@@ -72,8 +100,9 @@ namespace Quanlyquannet.Views
             double giaTien = Convert.ToDouble(numGiaTien.Value);
 
             DAO.DAOComputer.UpdateComputer(maMay, tenMay, giaTien);
-            MessageBox.Show("Sửa món thành công!");
-            loadComputer();
+            MessageBox.Show("Sửa máy thành công!", "Thông báo!");
+            refeshComputer();
+
         }
 
         private void btnLamMoiMay_Click(object sender, EventArgs e)
@@ -81,6 +110,7 @@ namespace Quanlyquannet.Views
             txtMaMay.Text = "";
             txtTenMay.Text = "";
             numGiaTien.Value = numGiaTien.Minimum;
+             
         }
     }
 

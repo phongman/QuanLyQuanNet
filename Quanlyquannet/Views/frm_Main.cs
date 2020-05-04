@@ -28,34 +28,69 @@ namespace Quanlyquannet
             
             foreach (Computer item in computerList)
             {
-                
-                Button btn = new Button() { Width = 100, Height = 100 };
-                //string strStatus;
-                btn.BackColor = Color.LightBlue;
-               // btn.Image.Size.Width = 100;
-               // btn.Image.Size.Height = 100;
-                btn.Image = Quanlyquannet.Properties.Resources.Devices_computer_icon;
-                /*            btn.Tag = item;
-
-
-                            if (item.TrangThai.Equals("False"))
-                            {
-                                strStatus = "Trống";
-
-                            }
-                            else
-                            {
-                                btn.BackColor = Color.LightBlue;
-                                strStatus = "Có khách";
-                            }
-
-                */
+                Button btn = new Button() { Width = 120, Height = 120 };
+                btn.Image = Quanlyquannet.Properties.Resources.Devices_computer_icon21;
+                btn.Tag = item;
+                btn.Click += btn_Click;
+                btn.TextAlign=ContentAlignment.BottomCenter;
+                btn.Text = item.TenMay;
+                if (item.TrangThai)
+                {
+                    btn.BackColor = Color.LightBlue;
+                    btn.ForeColor = Color.Red;
+                }
+                else
+                {
+                    btn.BackColor = Color.DarkGray;
+                    btn.ForeColor = Color.Black;
+                }
                 flpDanhSachMay.Controls.Add(btn);
-                
-
             }
              
 
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            string maMay = ((sender as Button).Tag as Computer).MaMay;
+            grvTaiKhoanDichVuMain.Tag = (sender as Button).Tag;
+
+            loadThongTinTaiKhoanMay(maMay);
+            loadDichVuMay(maMay);
+             
+        }
+
+        private void loadDichVuMay(string maMay)
+        {
+            List<TaiKhoanDichVu> danhsach = DAO.DAOTaiKhoanDichVu.LoadComputerList(maMay);
+            grvTaiKhoanDichVuMain.DataSource  = danhsach;
+            double sum = 0;
+            foreach (TaiKhoanDichVu item in danhsach)
+            {
+                sum += item.TongTien;
+                
+            }
+            lbPhiDichVu.Text = Convert.ToString(sum) + " đ";
+
+        }
+
+        private void loadThongTinTaiKhoanMay(string maMay)
+        {
+            TaiKhoanMay thongTin = DAO.DAOTaiKhoanMay.ThongTinTaiKhoanMay(maMay, DateTime.Now);
+
+            if(thongTin.ThoiGianSuDung>0)
+            {
+                lbTaiKhoan.Text = thongTin.TaiKhoan;
+                lbGioVao.Text = Convert.ToString(thongTin.GioVao);
+                lbThoiGianSuDung.Text = Convert.ToInt32(thongTin.ThoiGianSuDung) / 60 + " giờ" + thongTin.ThoiGianSuDung % 60 + " phút";
+            }
+            else
+            {
+                lbTaiKhoan.Text = "Chưa sử dụng";
+                lbGioVao.Text = "";
+                lbThoiGianSuDung.Text = Convert.ToString(0);
+            }
+           
         }
 
         public void skins()
@@ -94,21 +129,7 @@ namespace Quanlyquannet
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit4_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void numericChartRangeControlClient3_CustomizeSeries(object sender, ClientDataSourceProviderCustomizeSeriesEventArgs e)
         {
 
@@ -164,7 +185,8 @@ namespace Quanlyquannet
             Form frm_QuanLyDichVu = new frm_QuanLyDichVu();
             frm_QuanLyDichVu.ShowDialog();
         }
- 
+
+      
     }
     
 }
