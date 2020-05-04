@@ -11,13 +11,13 @@ namespace Quanlyquannet.DTO
     {
 
 
-        private string taiKhoan;
+        private string maKH;
         private DateTime gioVao;
         private double thoiGianSuDung;
 
-        public TaiKhoanMay(string taiKhoan, DateTime gioVao, double thoiGianSuDung)
+        public TaiKhoanMay(string maKH, DateTime gioVao, double thoiGianSuDung)
         {
-            this.TaiKhoan = taiKhoan;
+            this.MaKH = maKH;
             this.GioVao = gioVao;
             this.ThoiGianSuDung = thoiGianSuDung;
 
@@ -31,13 +31,14 @@ namespace Quanlyquannet.DTO
 
         public TaiKhoanMay(DataRow row)
         {
-            this.TaiKhoan = (string)row["TaiKhoan"];
+            this.MaKH = (string)row["MaKH"];
             this.GioVao = Convert.ToDateTime(row["GioVao"]);
             this.ThoiGianSuDung = Convert.ToDouble(row["ThoiGianSuDung"]);
         }
 
-        public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+     
         public DateTime GioVao { get => gioVao; set => gioVao = value; }
         public double ThoiGianSuDung { get => thoiGianSuDung; set => thoiGianSuDung = value; }
+        public string MaKH { get => maKH; set => maKH = value; }
     }
 }

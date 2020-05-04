@@ -80,7 +80,7 @@ namespace Quanlyquannet
 
             if(thongTin.ThoiGianSuDung>0)
             {
-                lbTaiKhoan.Text = thongTin.TaiKhoan;
+                lbTaiKhoan.Text = thongTin.MaKH;
                 lbGioVao.Text = Convert.ToString(thongTin.GioVao);
                 lbThoiGianSuDung.Text = Convert.ToInt32(thongTin.ThoiGianSuDung) / 60 + " giờ" + thongTin.ThoiGianSuDung % 60 + " phút";
             }

@@ -76,7 +76,7 @@ Alter  PROCEDURE [dbo].[ThongTin_TaiKhoanMay_HoatDong]
 	@thoigian datetime
 AS
 BEGIN
-	select kh.TaiKhoan,kh.Tien, tkm.GioVao,DATEDIFF(minute,tkm.GioVao,@thoigian) as ThoiGianSuDung
+	select kh.MaKH,kh.Tien, tkm.GioVao,DATEDIFF(minute,tkm.GioVao,@thoigian) as ThoiGianSuDung
 	from KhachHang  as kh,May as m ,TaiKhoanMay as tkm 
 	where tkm.MaMay=m.MaMay and tkm.MaKH=kh.MaKH  AND tkm.MaKH=kh.MaKH AND m.TrangThai=1  And tkm.MaMay=@idMay
 END
