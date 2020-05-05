@@ -21,6 +21,7 @@ namespace Quanlyquannet
              loadComputer();
         }
 
+        #region Giang code 
         private void loadComputer()
         {
           
@@ -28,16 +29,17 @@ namespace Quanlyquannet
             
             foreach (Computer item in computerList)
             {
-                Button btn = new Button() { Width = 120, Height = 120 };
+                Button btn = new Button() { Width = 150, Height = 150 };
                 btn.Image = Quanlyquannet.Properties.Resources.Devices_computer_icon21;
                 btn.Tag = item;
                 btn.Click += btn_Click;
                 btn.TextAlign=ContentAlignment.BottomCenter;
+                btn.Font = new Font(btn.Font, FontStyle.Bold);
                 btn.Text = item.TenMay;
                 if (item.TrangThai)
                 {
                     btn.BackColor = Color.LightBlue;
-                    btn.ForeColor = Color.Red;
+                    btn.ForeColor = Color.Green;
                 }
                 else
                 {
@@ -93,6 +95,7 @@ namespace Quanlyquannet
            
         }
 
+        #endregion
         public void skins()
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
