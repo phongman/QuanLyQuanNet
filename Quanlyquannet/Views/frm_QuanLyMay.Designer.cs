@@ -78,6 +78,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1292, 58);
             this.panelControl1.TabIndex = 1;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // label1
             // 
@@ -141,6 +142,7 @@
             0,
             0,
             0});
+            this.numGiaTien.ValueChanged += new System.EventHandler(this.numGiaTien_ValueChanged);
             // 
             // txtMaMay
             // 
@@ -151,6 +153,7 @@
             this.txtMaMay.Properties.Appearance.Options.UseFont = true;
             this.txtMaMay.Size = new System.Drawing.Size(193, 28);
             this.txtMaMay.TabIndex = 44;
+            this.txtMaMay.EditValueChanged += new System.EventHandler(this.txtMaMay_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -324,6 +327,7 @@
             this.txtTimKiemMay.Properties.Appearance.Options.UseFont = true;
             this.txtTimKiemMay.Size = new System.Drawing.Size(193, 28);
             this.txtTimKiemMay.TabIndex = 28;
+            this.txtTimKiemMay.EditValueChanged += new System.EventHandler(this.txtTimKiemMay_EditValueChanged);
             // 
             // lblTenTaiKhoan
             // 
@@ -347,6 +351,7 @@
             this.btnTimKiemMay.Size = new System.Drawing.Size(140, 35);
             this.btnTimKiemMay.TabIndex = 27;
             this.btnTimKiemMay.Text = "Tìm kiếm";
+            this.btnTimKiemMay.Click += new System.EventHandler(this.btnTimKiemMay_Click);
             // 
             // groupControl3
             // 
@@ -385,6 +390,7 @@
             this.Name = "frm_QuanLyMay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ MÁY";
+            this.Load += new System.EventHandler(this.frm_QuanLyMay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

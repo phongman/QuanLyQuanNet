@@ -12,6 +12,26 @@ namespace Quanlyquannet.DAO
 {
     class DAOComputer
     {
+        public static List<Computer> SearchComputerByName(string name)
+        {
+            List<Computer> computerList = new List<Computer>();
+            string queryString = $"SELECT * FROM May where TenMay like N'%{name}%'";
+            SqlCommand cmd = new SqlCommand(queryString);
+            //cmd.CommandType = CommandType.StoredProcedure;
+
+            DataTable dt = new DataTable();
+
+            dt = SQLDB.SQLDB.GetData(cmd);
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Computer computer = new Computer(item);
+                computerList.Add(computer);
+
+            }
+
+            return computerList;
+        }
         public static void DeleteComputer(string id)
         {
             SqlCommand cmd = new SqlCommand("Delete_May");
@@ -21,7 +41,8 @@ namespace Quanlyquannet.DAO
 
 
         }
- 
+
+
 
         public static void UpdateComputer(string maMay,string tenMay, double giaTien)
         {

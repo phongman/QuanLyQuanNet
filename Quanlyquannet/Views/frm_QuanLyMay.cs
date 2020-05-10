@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using Quanlyquannet.DAO;
 namespace Quanlyquannet.Views
 {
     public partial class frm_QuanLyMay : DevExpress.XtraEditors.XtraForm
@@ -83,7 +83,8 @@ namespace Quanlyquannet.Views
         {
             string maMay = txtMaMay.Text;
             string tenMay = txtTenMay.Text;
-            if (MessageBox.Show("Bạn có muốn xóa "+tenMay+ " không?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            var result = MessageBox.Show("Bạn có muốn xóa " + tenMay + " không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if ( result == DialogResult.OK)
             {
                 DAO.DAOComputer.DeleteComputer(maMay);
                 MessageBox.Show("Xóa máy thành công!", "Thông báo!");
@@ -111,6 +112,38 @@ namespace Quanlyquannet.Views
             txtTenMay.Text = "";
             numGiaTien.Value = numGiaTien.Minimum;
              
+        }
+
+        private void txtMaMay_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void numGiaTien_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_QuanLyMay_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimKiemMay_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiemMay_Click(object sender, EventArgs e)
+        {
+            computerList.DataSource = DAOComputer.SearchComputerByName(txtTimKiemMay.Text);
+            dgvQuanLyMay.DataSource = computerList;
+            addComputerBinding();
         }
     }
 

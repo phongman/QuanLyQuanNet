@@ -107,8 +107,9 @@
     <Compile Include="Views\frm_QuanLyDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frm_QuanLyDichVu.Designer.cs">
+    <Compile Include="Views\.Designer.cs">
       <DependentUpon>frm_QuanLyDichVu.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frm_QuanLyMay.cs">
       <SubType>Form</SubType>
