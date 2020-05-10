@@ -10,7 +10,11 @@ namespace Quanlyquannet.SQLDB
 {
     public class SQLDB
     {
+<<<<<<< HEAD
         static string _ConnectionString = @"Data Source=DESKTOP-EP3U0I3\SQLEXPRESS;Initial Catalog=QuanLyQuanNet01;Integrated Security=True";
+=======
+        static string _ConnectionString = @"Data Source=DESKTOP-COPK1IA;Initial Catalog=QuanLyQuanNet;Integrated Security=True";
+>>>>>>> QL-Dichvu
 
 
         static SqlConnection GetConnection()
@@ -31,7 +35,7 @@ namespace Quanlyquannet.SQLDB
                 using (SqlConnection con = GetConnection())
                 {
                     cmd.Connection = GetConnection();
-                    cmd.ExecuteNonQuery();
+                    //cmd.ExecuteNonQuery();
                 }
             }
         }
