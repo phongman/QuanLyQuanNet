@@ -22,5 +22,32 @@ namespace Quanlyquannet.Views
         {
 
         }
+
+        private void btnNapTien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maKH = txtTenTaiKhoan.Text;
+                double tienNap = Convert.ToDouble(txtSoTienNap.Text);
+                DAO.DAOAccounts.AddMoney(maKH, tienNap);
+                MessageBox.Show("Nạp tiền thành công!", "Thông báo!");
+                txtTenTaiKhoan.Text = maKH;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!");
+            }
+        }
+
+        private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+            string maKH = txtTenTaiKhoan.Text;
+            txtThoiGianMoi.Text = DAO.DAOAccounts.GetAccountInfo(maKH).ToString();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

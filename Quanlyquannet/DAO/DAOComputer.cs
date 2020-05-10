@@ -65,8 +65,6 @@ namespace Quanlyquannet.DAO
             cmd.Parameters.AddWithValue("@giaTien", giaTien);
             SQLDB.SQLDB.ExecuteNoneQuery(cmd);
 
-
-
         }
 
     }

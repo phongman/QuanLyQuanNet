@@ -22,5 +22,26 @@ namespace Quanlyquannet.Views
         {
 
         }
+
+        private void groupControl1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frm_ThongKeDichVu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyQuanNet01DataSet.ThongKe_DichVu' table. You can move, or remove it, as needed.
+            
+        }
+
+        private void btnDongY_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyQuanNet01DataSet.ThongKe_DichVu' table. You can move, or remove it, as needed.
+
+            this.thongKe_DichVuTableAdapter.Fill(this.quanLyQuanNet01DataSet.ThongKe_DichVu, dtpTuNgay.Value , dtpDenNgay.Value);
+
+            this.reportViewer1.RefreshReport();
+
+        }
     }
 }

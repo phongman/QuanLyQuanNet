@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NapTien));
-            this.textSoTienNap = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoTienNap = new DevExpress.XtraEditors.TextEdit();
             this.txtTenTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.txtThoiGianMoi = new DevExpress.XtraEditors.TextEdit();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -39,20 +39,20 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblTenMay = new DevExpress.XtraEditors.LabelControl();
             this.lblMaMay = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.textSoTienNap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTienNap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiGianMoi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textSoTienNap
+            // txtSoTienNap
             // 
-            this.textSoTienNap.Location = new System.Drawing.Point(262, 173);
-            this.textSoTienNap.Margin = new System.Windows.Forms.Padding(4);
-            this.textSoTienNap.Name = "textSoTienNap";
-            this.textSoTienNap.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSoTienNap.Properties.Appearance.Options.UseFont = true;
-            this.textSoTienNap.Size = new System.Drawing.Size(262, 26);
-            this.textSoTienNap.TabIndex = 9;
+            this.txtSoTienNap.Location = new System.Drawing.Point(262, 173);
+            this.txtSoTienNap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoTienNap.Name = "txtSoTienNap";
+            this.txtSoTienNap.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTienNap.Properties.Appearance.Options.UseFont = true;
+            this.txtSoTienNap.Size = new System.Drawing.Size(262, 26);
+            this.txtSoTienNap.TabIndex = 9;
             // 
             // txtTenTaiKhoan
             // 
@@ -63,6 +63,7 @@
             this.txtTenTaiKhoan.Properties.Appearance.Options.UseFont = true;
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(262, 26);
             this.txtTenTaiKhoan.TabIndex = 7;
+            this.txtTenTaiKhoan.TextChanged += new System.EventHandler(this.txtTenTaiKhoan_TextChanged);
             // 
             // txtThoiGianMoi
             // 
@@ -92,6 +93,7 @@
             this.btnHuy.Size = new System.Drawing.Size(151, 51);
             this.btnHuy.TabIndex = 32;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnNapTien
             // 
@@ -104,6 +106,7 @@
             this.btnNapTien.Size = new System.Drawing.Size(151, 51);
             this.btnNapTien.TabIndex = 31;
             this.btnNapTien.Text = "Nạp Tiền";
+            this.btnNapTien.Click += new System.EventHandler(this.btnNapTien_Click);
             // 
             // labelControl1
             // 
@@ -150,14 +153,14 @@
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnNapTien);
             this.Controls.Add(this.txtThoiGianMoi);
-            this.Controls.Add(this.textSoTienNap);
+            this.Controls.Add(this.txtSoTienNap);
             this.Controls.Add(this.txtTenTaiKhoan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_NapTien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NẠP TIỀN VÀO TÀI KHOẢN";
             this.Load += new System.EventHandler(this.frm_NapTien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textSoTienNap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTienNap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiGianMoi.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -167,7 +170,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textSoTienNap;
+        private DevExpress.XtraEditors.TextEdit txtSoTienNap;
         private DevExpress.XtraEditors.TextEdit txtTenTaiKhoan;
         private DevExpress.XtraEditors.TextEdit txtThoiGianMoi;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

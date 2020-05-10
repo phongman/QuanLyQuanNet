@@ -32,12 +32,10 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.nudQuyen = new System.Windows.Forms.NumericUpDown();
             this.txtTien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMaKH = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
-            this.txtQuyen = new DevExpress.XtraEditors.TextEdit();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.txtETenTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.lblTrangThai = new DevExpress.XtraEditors.LabelControl();
@@ -52,14 +50,13 @@
             this.lblTenTaiKhoan = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvQuanLyTaiKhoan = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuyen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtETenTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -67,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -95,12 +92,10 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.nudQuyen);
             this.groupControl1.Controls.Add(this.txtTien);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.txtMaKH);
-            this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.btnLamMoi);
-            this.groupControl1.Controls.Add(this.txtQuyen);
             this.groupControl1.Controls.Add(this.txtMatKhau);
             this.groupControl1.Controls.Add(this.txtETenTaiKhoan);
             this.groupControl1.Controls.Add(this.lblTrangThai);
@@ -115,6 +110,23 @@
             this.groupControl1.Size = new System.Drawing.Size(613, 729);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin";
+            // 
+            // nudQuyen
+            // 
+            this.nudQuyen.Location = new System.Drawing.Point(232, 442);
+            this.nudQuyen.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudQuyen.Name = "nudQuyen";
+            this.nudQuyen.Size = new System.Drawing.Size(88, 23);
+            this.nudQuyen.TabIndex = 40;
+            this.nudQuyen.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtTien
             // 
@@ -137,28 +149,6 @@
             this.labelControl2.TabIndex = 39;
             this.labelControl2.Text = "Tiền:";
             // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(232, 122);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKH.Properties.Appearance.Options.UseFont = true;
-            this.txtMaKH.Size = new System.Drawing.Size(193, 28);
-            this.txtMaKH.TabIndex = 36;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(145, 122);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(68, 21);
-            this.labelControl1.TabIndex = 37;
-            this.labelControl1.Text = "Mã KH: ";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
-            // 
             // btnLamMoi
             // 
             this.btnLamMoi.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,16 +162,6 @@
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // txtQuyen
-            // 
-            this.txtQuyen.Location = new System.Drawing.Point(232, 440);
-            this.txtQuyen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuyen.Properties.Appearance.Options.UseFont = true;
-            this.txtQuyen.Size = new System.Drawing.Size(193, 28);
-            this.txtQuyen.TabIndex = 34;
-            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(232, 271);
@@ -189,6 +169,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(193, 28);
             this.txtMatKhau.TabIndex = 31;
             // 
@@ -246,6 +227,7 @@
             this.btnThem.Size = new System.Drawing.Size(125, 51);
             this.btnThem.TabIndex = 26;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -258,6 +240,7 @@
             this.btnXoa.Size = new System.Drawing.Size(125, 51);
             this.btnXoa.TabIndex = 28;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -270,6 +253,7 @@
             this.btnSua.Size = new System.Drawing.Size(125, 51);
             this.btnSua.TabIndex = 27;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // splitterControl1
             // 
@@ -326,7 +310,7 @@
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.dataGridView1);
+            this.groupControl3.Controls.Add(this.dgvQuanLyTaiKhoan);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(619, 158);
             this.groupControl3.Name = "groupControl3";
@@ -334,16 +318,17 @@
             this.groupControl3.TabIndex = 4;
             this.groupControl3.Text = "Kết quả";
             // 
-            // dataGridView1
+            // dgvQuanLyTaiKhoan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 602);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvQuanLyTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQuanLyTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuanLyTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvQuanLyTaiKhoan.Location = new System.Drawing.Point(2, 25);
+            this.dgvQuanLyTaiKhoan.Name = "dgvQuanLyTaiKhoan";
+            this.dgvQuanLyTaiKhoan.RowHeadersWidth = 51;
+            this.dgvQuanLyTaiKhoan.RowTemplate.Height = 24;
+            this.dgvQuanLyTaiKhoan.Size = new System.Drawing.Size(592, 602);
+            this.dgvQuanLyTaiKhoan.TabIndex = 0;
             // 
             // frm_QuanLyTaiKhoan
             // 
@@ -365,9 +350,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuyen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtETenTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -376,7 +360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyTaiKhoan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,7 +373,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnLamMoi;
-        private DevExpress.XtraEditors.TextEdit txtQuyen;
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private DevExpress.XtraEditors.TextEdit txtETenTaiKhoan;
         private DevExpress.XtraEditors.LabelControl lblTrangThai;
@@ -398,14 +381,13 @@
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnSua;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvQuanLyTaiKhoan;
         private DevExpress.XtraEditors.TextEdit txtTenTaiKhoan;
         private DevExpress.XtraEditors.LabelControl lblTenTaiKhoan;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit txtMaKH;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtTien;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.NumericUpDown nudQuyen;
     }
 }
